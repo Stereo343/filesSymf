@@ -1,0 +1,17 @@
+{% extends "layout/layout.html.twig" %}
+
+{% block title %}Les citations - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div>
+        <div>
+            {% if dailyQuotes is not empty %}
+                <ul>
+                {% for dailyQuote in dailyQuotes %}
+                    <li><a href="{{ path('app_daily_quote_show', {'dailyQuote': dailyQuote.id}) }}" >{{ dailyQuote.author }}</a>: {{ dailyQuote.text }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

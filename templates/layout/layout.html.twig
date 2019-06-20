@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} - Quotidien</title>
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ path('app_home') }}">Menu</a></li>
+                <li><a href="{{ path('app_coucou_1') }}">Coucou1</a></li>
+                <li><a href="{{ path('app_coucou_2') }}">Coucou2</a></li>
+                <li><a href="{' path('/daily-quote') }}"}>Citations</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div>
+            {% block body %}{% endblock %}
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

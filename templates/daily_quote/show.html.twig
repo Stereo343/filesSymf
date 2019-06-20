@@ -1,0 +1,13 @@
+{% extends "layout/layout.html.twig" %}
+
+{% block title %}Citation du swar - {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div>
+        <div>
+            {% if dailyQuote is not null %}
+                <p>{{ dailyQuote.author }}: {{ dailyQuote.text }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
